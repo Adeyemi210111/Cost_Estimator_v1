@@ -6,9 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cost Estimate Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="/dist/html2pdf.bundle.min.js"></script>
+    <script>
+        function generatePDF() {
+          // Choose the element that our invoice is rendered in.
+          let element = document.getElementById("invoice");
+          // Choose the element and save the PDF for our user.
+          html2pdf()
+          .set({ html2canvas: { scale: 4 } })
+            .from(element)
+            .save();
+        }
+      </script>
 </head>
 
 <body>
+    
     <div id="container">
 
     
@@ -542,7 +555,7 @@
         </table>
 
 
-    </section>
+    </section><br><hr>
 
     <section id="leadership">
         <h1>Leadership Resources</h1>
@@ -576,16 +589,15 @@
                </td>
            </tr>
         </table>
-         <!-- Generate Estimate -->
-    <button type="submit" id="check">Generate Estimate</button><br>
-    </section>
+        
+    </section><br><hr>
 
    
 
     <section id="invoice"> 
         <h1>Invoice Items</h1>
         <table>
-            <tr>
+            <tr class="t-head">
                 <th>S/N</th>
                 <th>Item</th>
                 <th>Quantity</th>
@@ -597,166 +609,227 @@
             <tr>
                 <td id="serial1">1</td>
                 <td>
-                    <input type="text" value="User Interface and User Experience Designs" id="item1">
+                    <input type="text" value="User Interface and User Experience Designs" id="item1" class="mult3">
                 </td>
                 <td>
-                    <input type="number" value="1" id="quant1">
+                    <input type="number" value="1" id="quant1" class="mult1">
                 </td>
                 <td>
-                    <input type="number" value="0.05" id="perc1">
+                    <input type="number" value="0.05" id="perc1" class="mult1">
                 </td>
                 <td>
-                    <div id="price1"></div>
+                    <div id="price1" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="amount1"></div>
+                    <div id="amount1" class="mult1"></div>
                 </td>
             </tr>
 
             <tr>
                 <td id="serial2">2</td>
                 <td>
-                    <input type="text" value="Development of the Backend System (CMS)" id="item2">
+                    <input type="text" value="Development of the Backend System (CMS)" id="item2" class="mult3">
                 </td>
                 <td>
-                    <input type="number" value="1" id="quant2">
+                    <input type="number" value="1" id="quant2" class="mult1">
                 </td>
                 <td>
-                    <input type="number" value="0.4" id="perc2">
+                    <input type="number" value="0.4" id="perc2" class="mult1">
                 </td>
                 <td>
-                    <div id="price2"></div>
+                    <div id="price2" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="amount2"></div>
+                    <div id="amount2" class="mult1"></div>
                 </td>
             </tr>
 
             <tr>
                 <td id="serial3">3</td>
                 <td>
-                    <input type="text" value="Frontend Design and Development" id="item3">
+                    <input type="text" value="Frontend Design and Development" id="item3" class="mult3">
                 </td>
                 <td>
-                    <input type="number" value="1" id="quant3">
+                    <input type="number" value="1" id="quant3" class="mult1">
                 </td>
                 <td>
-                    <input type="number" value="0.45" id="perc3">
+                    <input type="number" value="0.45" id="perc3" class="mult1">
                 </td>
                 <td>
-                    <div id="price3"></div>
+                    <div id="price3" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="amount3"></div>
+                    <div id="amount3" class="mult1"></div>
                 </td>
             </tr>
 
             <tr>
                 <td id="serial4">4</td>
                 <td>
-                    <input type="text" value="Project Management & Quality Assurance" id="item4">
+                    <input type="text" value="Project Management & Quality Assurance" id="item4" class="mult3">
                 </td>
                 <td>
-                    <input type="number" value="1" id="quant4">
+                    <input type="number" value="1" id="quant4" class="mult1">
                 </td>
                 <td>
-                    <input type="number" value="0.1" id="perc4">
+                    <input type="number" value="0.1" id="perc4" class="mult1">
                 </td>
                 <td>
-                    <div id="price4"></div>
+                    <div id="price4" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="amount4"></div>
+                    <div id="amount4" class="mult1"></div>
                 </td>
             </tr>
 
             <tr>
                 <td id="serial5">5</td>
                 <td>
-                    <input type="text" value="Deployment, Training & 6 Months Support" id="item5">
+                    <input type="text" value="Deployment, Training & 6 Months Support" id="item5" class="mult3">
                 </td>
                 <td>
-                    <input type="number" value="1" id="quant5">
+                    <input type="number" value="1" id="quant5" class="mult1">
                 </td>
                 <td>
-                    <input type="number" value="0.00" id="perc5">
+                    <input type="number" value="0.00" id="perc5" class="mult1">
                 </td>
                 <td>
-                    <div id="price5"></div>
+                    <div id="price5" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="amount5"></div>
+                    <div id="amount5" class="mult1"></div>
                 </td>
             </tr>
 
             <tr>
                 <td id="serial6">6</td>
                 <td>
-                    <input type="text" id="item1">
+                    <input type="text" id="item1" class="mult3">
                 </td>
                 <td>
-                    <input type="number" value="1" id="quant6">
+                    <input type="number" value="1" id="quant6" class="mult1">
                 </td>
                 <td>
-                    <input type="number" id="perc6">
+                    <input type="number" id="perc6" class="mult1">
                 </td>
                 <td>
-                    <div id="price6"></div>
+                    <div id="price6" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="amount6"></div>
+                    <div id="amount6" class="mult1"></div>
                 </td>
             </tr>
 
             <tr>
                 <td id="serial7">7</td>
                 <td>
-                    <input type="text" id="item7">
+                    <input type="text" id="item7" class="mult3">
                 </td>
                 <td>
-                    <input type="number" value="1" id="quant7">
+                    <input type="number" value="1" id="quant7" class="mult1">
                 </td>
                 <td>
-                    <input type="number" id="perc7">
+                    <input type="number" id="perc7" class="mult1">
                 </td>
                 <td>
-                    <div id="price7"></div>
+                    <div id="price7" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="amount7"></div>
+                    <div id="amount7" class="mult1"></div>
                 </td>
             </tr>
 
             <tr class="test">
                 <td id="serial8">8</td>
                 <td>
-                    <input type="text" id="item8">
+                    <input type="text" id="item8" class="mult3">
                 </td>
                 <td>
-                    <input type="number" value="1" id="quant8">
+                    <input type="number" value="1" id="quant8" class="mult1">
                 </td>
                 <td>
-                    <input type="number" id="perc8">
+                    <input type="number" id="perc8" class="mult1">
                 </td>
                 <td>
-                    <div id="price8"></div>
+                    <div id="price8" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="amount8"></div>
+                    <div id="amount8" class="mult1"></div>
+                </td>
+            </tr>
+            <tr class="test">
+                <td></td>
+                <td>
+                   
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    <!-- <input type="number" id="perc8" class="mult1"> -->
+                    <span>Sub-Total</span>
+                </td>
+                <td>
+                    <div></div>
+                </td>
+                <td>
+                    <div id="subTotal" class="mult1"></div>
+                </td>
+            </tr>
+            <tr class="test">
+                <td></td>
+                <td>
+                   
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    <!-- <input type="number" id="perc8" class="mult1"> -->
+                    <span>VAT (7.5% of Sub - Total)</span>
+                </td>
+                <td>
+                    <div></div>
+                </td>
+                <td>
+                    <div id="VAT" class="mult1"></div>
+                </td>
+            </tr>
+            <tr class="test">
+                <td></td>
+                <td>
+                   
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    <!-- <input type="number" id="perc8" class="mult1"> -->
+                    <span>Total Dev Cost</span>
+                </td>
+                <td>
+                    <div></div>
+                </td>
+                <td>
+                    <div id="totalDevCost" class="mult1"></div>
                 </td>
             </tr>
         </table>
-        <div id="subTotal"></div>
-        <div id="VAT"></div>
-        <div id="totalDevCost"></div>
+        <!-- <div id="subTotal"></div> -->
+        <!-- <div id="VAT"></div> -->
+        <!-- <div id="totalDevCost"></div> -->
+         <!-- Generate Estimate -->
+    <button type="submit" id="check">Generate Estimate</button><br>
+        <button onclick="generatePDF()" id="check2">Generate PDF</button>
     </section>
-
+    
     <div id="show"></div>
 
 </div>
+<script src="main.js"></script>
 </body>
 
 
-<script src="main.js"></script>
+
 
 </html>

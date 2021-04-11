@@ -470,10 +470,10 @@ function calculate() {
     show.innerHTML = 'total cost:' + totalCost + 'incidentals:' + incidentals + 'final cost:' + finalCost + 'markup:' + markup + 'markupvalue:' + markupval + 'commission:' + commission + 'finders fee' + findFee + 'price:' + price;
     
     sub = calcamount1 + calcamount2 + calcamount3 + calcamount4 + calcamount5 + calcamount6 + calcamount7 + calcamount8;
-    subTotal.innerHTML = 'Sub Total' + ' ' + '=' + ' ' + '#' + sub;
+    subTotal.innerHTML = '#' + sub;
     vatamount = vatRate * sub;
-    vat.innerHTML = 'Value Added Tax (7.5% of Sub Total)' + ' ' + '=' + ' ' + '#' + vatamount;
+    vat.innerHTML =  '#' + vatamount;
     totaldev = sub + vatamount;
-    totalDevCost.innerHTML = 'Total Development Cost' + ' ' + '=' + ' ' + '#' + totaldev;
+    totalDevCost.innerHTML = '#' + totaldev;
 }
 
