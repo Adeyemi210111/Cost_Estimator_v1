@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Estimate Calculator</title>
+</head>
+
+<body>
+    <section id="generalInfo">
+        <input type="text" id="Pname"> Project Name <br>
+        <input type="text" id="Cname"> Client's Name <br>
+        <input type="text" id="PM"> Product Manager <br>
+        <input type="number" id="PD"> Project Duration <br>
+        <select name="Pscale" id="Pscale">
+            <option value="smallScale">Small Scale</option>
+            <option value="mediumScale">Medium Scale</option>
+            <option value="largeScale">Large Scale</option>
+        </select> <br>
+        <select name="Ptype" id="Ptype">
+            <option value="web&mobile">Web & Mobile App</option>
+            <option value="mobile">Mobile App</option>
+            <option value="iot">IOT</option>
+            <option value="cyber">Cyber Security</option>
+            <option value="data">Data Science</option>
+            <option value="webapp">Web App</option>
+            <option value="webdev">Web Development</option>
+        </select> <br>
+        <input type="checkbox" id="commission"> Commission
+        <input type="checkbox" value="find" id="find"> Finder's Fee
+        <button type="submit" id="check">Generate Estimate</button><br>
+    </section>
+
+    <section id="resourceList">
+        <table>
+            <tr>
+                <th>S/N</th>
+                <th>Resource Category</th>
+                <th>Resource Level</th>
+                <th>Project Duration (weeks)</th>
+                <th>Number of Resources</th>
+                <th>Utilization Rate</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>
+                    <select name="categoryOption1" id="categoryOption1">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel1" id="resourceLevel1">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration1">
+                </td>
+                <td>
+                    <input type="number" id="resNo1">
+                </td>
+                <td>
+                    <input type="number" id="util1">
+                </td>
+            </tr>
+
+            <!-- Second Row-->
+            <tr>
+                <td>2</td>
+                <td>
+                    <select name="categoryOption2" id="categoryOption2">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel2" id="resourceLevel2">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration2">
+                </td>
+                <td>
+                    <input type="number" id="resNo2">
+                </td>
+                <td>
+                    <input type="number" id="util2">
+                </td>
+            </tr>
+
+            <!-- Third Row-->
+            <tr>
+                <td>3</td>
+                <td>
+                    <select name="categoryOption3" id="categoryOption3">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel3" id="resourceLevel3">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration3">
+                </td>
+                <td>
+                    <input type="number" id="resNo3">
+                </td>
+                <td>
+                    <input type="number" id="util3">
+                </td>
+            </tr>
+
+            <!-- Fourth Row-->
+            <tr>
+                <td>4</td>
+                <td>
+                    <select name="categoryOption4" id="categoryOption4">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel4" id="resourceLevel4">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration4">
+                </td>
+                <td>
+                    <input type="number" id="resNo4">
+                </td>
+                <td>
+                    <input type="number" id="util4">
+                </td>
+            </tr>
+
+            <!-- Fifth Row-->
+            <tr>
+                <td>5</td>
+                <td>
+                    <select name="categoryOption5" id="categoryOption5">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel5" id="resourceLevel5">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration5">
+                </td>
+                <td>
+                    <input type="number" id="resNo5">
+                </td>
+                <td>
+                    <input type="number" id="util5">
+                </td>
+            </tr>
+
+            <!-- Sixth Row-->
+            <tr>
+                <td>6</td>
+                <td>
+                    <select name="categoryOption6" id="categoryOption6">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel6" id="resourceLevel6">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration6">
+                </td>
+                <td>
+                    <input type="number" id="resNo6">
+                </td>
+                <td>
+                    <input type="number" id="util6">
+                </td>
+            </tr>
+
+            <!-- Seventh Row-->
+            <tr>
+                <td>7</td>
+                <td>
+                    <select name="categoryOption7" id="categoryOption7">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel7" id="resourceLevel7">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration7">
+                </td>
+                <td>
+                    <input type="number" id="resNo7">
+                </td>
+                <td>
+                    <input type="number" id="util7">
+                </td>
+            </tr>
+
+            <!-- Eighth Row-->
+            <tr>
+                <td>8</td>
+                <td>
+                    <select name="categoryOption8" id="categoryOption8">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel8" id="resourceLevel8">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration8">
+                </td>
+                <td>
+                    <input type="number" id="resNo8">
+                </td>
+                <td>
+                    <input type="number" id="util8">
+                </td>
+            </tr>
+
+            <!-- Ninth Row-->
+            <tr>
+                <td>9</td>
+                <td>
+                    <select name="categoryOption9" id="categoryOption9">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel2" id="resourceLevel9">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration9">
+                </td>
+                <td>
+                    <input type="number" id="resNo9">
+                </td>
+                <td>
+                    <input type="number" id="util9">
+                </td>
+            </tr>
+
+            <!-- Tenth Row-->
+            <tr>
+                <td>10</td>
+                <td>
+                    <select name="categoryOption10" id="categoryOption10">
+                        <option value="backend engineer">Backend Engineer</option>
+                        <option value="frontend engineer">Frontend Engineer</option>
+                        <option value="mobile engineer">Mobile Engineer</option>
+                        <option value="qa engineer">Quality Assurance Engineer</option>
+                        <option value="Product Designer">Product Designer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="resourceLevel10" id="resourceLevel10">
+                        <option value="intern">Intern</option>
+                        <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
+                        </option>
+                        <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
+                        </option>
+                        <option value="software engineer 1">Software Engineer / Product Designer / Product Manager 1
+                        </option>
+                        <option value="software engineer 2">Software Engineer / Product Designer / Product Manager 2
+                        </option>
+                        <option value="senior engineer 1">Senior (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="senior engineer 2">Senior (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="senior engineer 3">Senior (Engineer / Product Designer / Product Manager) 3
+                        </option>
+                        <option value="principal engineer 1">Principal (Engineer / Product Designer / Product Manager) 1
+                        </option>
+                        <option value="principal engineer 2">Principal (Engineer / Product Designer / Product Manager) 2
+                        </option>
+                        <option value="chief technology officer">Chief Technology Officer</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="duration10">
+                </td>
+                <td>
+                    <input type="number" id="resNo10">
+                </td>
+                <td>
+                    <input type="number" id="util10">
+                </td>
+            </tr>
+        </table>
+
+
+    </section>
+
+    <section id="leadership">
+        <h1>Leadership Resources</h1>
+        <table>
+           <tr>
+               <th>S/N</th>
+               <th>Resource Category</th>
+               <th>Utilization Rate</th>
+               <th>Duration (Weeks)</th>
+           </tr>
+           
+           <tr>
+               <td>1</td>
+               <td>Technology Lead</td>
+               <td>
+                   <input type="number" id="util11">
+               </td>
+               <td>
+                   <input type="number" id="duration11">
+               </td>
+           </tr>
+           
+           <tr>
+               <td>2</td>
+               <td>Product Innovation Lead</td>
+               <td>
+                   <input type="number" id="util12">
+               </td>
+               <td>
+                   <input type="number" id="duration12">
+               </td>
+           </tr>
+        </table>
+    </section>
+
+    <section id="invoice"> 
+        <h1>Invoice Items</h1>
+        <table>
+            <tr>
+                <th>S/N</th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Percentage</th>
+                <th>Price</th>
+                <th>Amount</th>
+            </tr>
+
+            <tr>
+                <td id="serial1">1</td>
+                <td>
+                    <input type="text" value="User Interface and User Experience Designs" id="item1">
+                </td>
+                <td>
+                    <input type="number" value="1" id="quant1">
+                </td>
+                <td>
+                    <input type="number" value="0.05" id="perc1">
+                </td>
+                <td>
+                    <div id="price1"></div>
+                </td>
+                <td>
+                    <div id="amount1"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="serial2">2</td>
+                <td>
+                    <input type="text" value="Development of the Backend System (CMS)" id="item2">
+                </td>
+                <td>
+                    <input type="number" value="1" id="quant2">
+                </td>
+                <td>
+                    <input type="number" value="0.4" id="perc2">
+                </td>
+                <td>
+                    <div id="price2"></div>
+                </td>
+                <td>
+                    <div id="amount2"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="serial3">3</td>
+                <td>
+                    <input type="text" value="Frontend Design and Development" id="item3">
+                </td>
+                <td>
+                    <input type="number" value="1" id="quant3">
+                </td>
+                <td>
+                    <input type="number" value="0.45" id="perc3">
+                </td>
+                <td>
+                    <div id="price3"></div>
+                </td>
+                <td>
+                    <div id="amount3"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="serial4">4</td>
+                <td>
+                    <input type="text" value="Project Management & Quality Assurance" id="item4">
+                </td>
+                <td>
+                    <input type="number" value="1" id="quant4">
+                </td>
+                <td>
+                    <input type="number" value="0.1" id="perc4">
+                </td>
+                <td>
+                    <div id="price4"></div>
+                </td>
+                <td>
+                    <div id="amount4"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="serial5">5</td>
+                <td>
+                    <input type="text" value="Deployment, Training & 6 Months Support" id="item5">
+                </td>
+                <td>
+                    <input type="number" value="1" id="quant5">
+                </td>
+                <td>
+                    <input type="number" value="0.00" id="perc5">
+                </td>
+                <td>
+                    <div id="price5"></div>
+                </td>
+                <td>
+                    <div id="amount5"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="serial6">6</td>
+                <td>
+                    <input type="text" id="item1">
+                </td>
+                <td>
+                    <input type="number" value="1" id="quant6">
+                </td>
+                <td>
+                    <input type="number" id="perc6">
+                </td>
+                <td>
+                    <div id="price6"></div>
+                </td>
+                <td>
+                    <div id="amount6"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="serial7">7</td>
+                <td>
+                    <input type="text" id="item7">
+                </td>
+                <td>
+                    <input type="number" value="1" id="quant7">
+                </td>
+                <td>
+                    <input type="number" id="perc7">
+                </td>
+                <td>
+                    <div id="price7"></div>
+                </td>
+                <td>
+                    <div id="amount7"></div>
+                </td>
+            </tr>
+
+            <tr class="test">
+                <td id="serial8">8</td>
+                <td>
+                    <input type="text" id="item8">
+                </td>
+                <td>
+                    <input type="number" value="1" id="quant8">
+                </td>
+                <td>
+                    <input type="number" id="perc8">
+                </td>
+                <td>
+                    <div id="price8"></div>
+                </td>
+                <td>
+                    <div id="amount8"></div>
+                </td>
+            </tr>
+        </table>
+        <div id="subTotal"></div>
+        <div id="VAT"></div>
+        <div id="totalDevCost"></div>
+    </section>
+
+    <div id="show"></div>
+</body>
+
+
+<script src="main.js"></script>
+
+</html>
