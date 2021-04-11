@@ -1,0 +1,193 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#container{
+    background: #E5E5E5;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+#wrap{
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+}
+#te{
+    
+width: 60px;
+height: 50px;
+left: 235.99px;
+top: 17.76px;
+background: #0050C8;
+/* Primary Colors/White */
+padding: 10px;
+color: #FFFFFF;
+}
+
+
+#coe{
+   
+width: 59.48px;
+height: 30.12px;
+padding-bottom: 11px;
+
+/* Primary Colors/Primary */
+
+color: #0050C8;
+}
+
+#small_text{
+    /* //styleName: label/label 400; */
+
+top: 60.36px;
+}
+
+.basic_input{
+
+/* Auto Layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+padding-left: 15px;
+position: static;
+width: 300px;
+height: 61px;
+left: 0px;
+top: 255px;
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: inline-block;
+margin-left: 15px;
+/* text/Secondary - Caption */
+outline: none;
+border: none;
+color: #6B6C7E;
+}
+
+#generalInfo{
+    text-align: center;
+}
+
+.mult{
+padding: 0px;
+width: 200px;
+height: 41px;
+left: 0px;
+top: 255px;
+margin-top: 15px;
+margin-right: 5px;
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: inline-block;
+margin-left: 15px;
+/* text/Secondary - Caption */
+outline: none;
+border: none;
+color: #6B6C7E;
+padding-left: 15px;
+}
+
+.mult1{
+padding: 0px;
+padding-left: 10px;
+width: 220px;
+height: 41px;
+left: 0px;
+top: 255px;
+margin-top: 15px;
+margin-right: 15px;
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: inline-block;
+
+/* text/Secondary - Caption */
+outline: none;
+border: none;
+color: #6B6C7E;
+}
+
+.mult2{
+    padding: 0px;
+width: 550px;
+height: 41px;
+margin-top: 15px;
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 150%;
+padding-left: 10px;
+/* identical to box height, or 24px */
+display: inline-block;
+margin-left: 15px;
+margin-right: 15px;
+/* text/Secondary - Caption */
+outline: none;
+border: none;
+color: #6B6C7E;
+}
+
+#selectors{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#commission, #find{
+    margin-right: 10px;
+    
+}
+
+#resourceList, #leadership{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#resourceList table{
+    text-align: center;
+}
+
+.t-head{
+    font-size: 20px;
+}
+
+#check{
+    /* Auto Layout */
+
+
+justify-content: center;
+align-items: center;
+padding: 10px 16px;
+font-size: 20px;
+color: white;
+width: 302px;
+height: 44px;
+margin-top: 20px;
+
+/* Primary Colors/Primary */
+
+background: #0050C8;
+border-radius: 8px;
+}
+
