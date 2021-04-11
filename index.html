@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Cost Estimator</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+    <div class="main_container">
+        <div id="container">
+            <div id="te_rec"></div>
+            <img src="images/Te.png" alt="" id="te">
+            <img src="images/coe.png" alt="" id="coe">
+            <img src="images/Teams Cost Estimate.png" alt="" id="small_text">
+            
+            <div id="lower">
+                <h1 id="head">Finance Team Cost Estimate</h1>
+                <p id="note">Input your access code to access the platform</p>
+                <small id="input_small">Access Code</small>
+                <input type="password" id="code">
+                <button id="authorize">Authorize</button>
+                <p id="bottom">Contact the Finance Team (finance@prunedge.com) for enquiries</p>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        let input, pname, cname, prname, pd, b_next, password, subtotal, aside, add_resource;
+    let button = document.getElementById('authorize');
+    input = document.getElementById('code');
+    pname = document.getElementById('p-name');
+    cname = document.getElementById('c-name');
+    prname = document.getElementById('pr-name');
+    pd = document.getElementById('pd');
+    b_next = document.getElementById('basic_next');
+    password = 'financerocks';
+    subtotal = document.getElementById('subtotal');
+    aside = document.getElementById('aside');
+    add_resource = document.getElementById('add_resource');
+    button.addEventListener('click', function () {
+        if (input.value == password) {
+            window.location.href = 'run.html';
+        }else{
+            alert('wrong details');
+        }
+    });
+    </script>
+</body>
+
+<footer>
+    <small>Powered by <img src="images/logo.png" alt=""></small>
+</footer>
+</html>
