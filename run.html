@@ -13,6 +13,24 @@
           let element = document.getElementById("invoice");
           let check = document.getElementById("check");
           let check2 = document.getElementById("check2");
+          let item6 = document.getElementById('item6');
+          let row6 = document.getElementById('row6');
+          let row7 = document.getElementById('row7');
+          let row8 = document.getElementById('row8');
+          if (item6.value == '') {
+              row6.classList.add('hidden');
+              row7.classList.add('hidden');
+              row8.classList.add('hidden');
+          }
+
+          if (item7.value == '') {
+              row7.classList.add('hidden');
+              row8.classList.add('hidden');
+          }
+
+          if (item8.value == '') {
+              row8.classList.add('hidden');
+          }
           element.classList.add('zoom-out');
           check.style = 'display:none';
           check2.style = 'display:none';
@@ -706,10 +724,10 @@
                 </td>
             </tr>
 
-            <tr>
+            <tr id="row6">
                 <td id="serial6">6</td>
                 <td>
-                    <input type="text" id="item1" class="mult3">
+                    <input type="text" id="item6" class="mult3">
                 </td>
                 <td>
                     <input type="number" value="1" id="quant6" class="mult1">
@@ -725,7 +743,7 @@
                 </td>
             </tr>
 
-            <tr>
+            <tr id="row7">
                 <td id="serial7">7</td>
                 <td>
                     <input type="text" id="item7" class="mult3">
@@ -744,7 +762,7 @@
                 </td>
             </tr>
 
-            <tr class="test">
+            <tr id="row8" class="test">
                 <td id="serial8">8</td>
                 <td>
                     <input type="text" id="item8" class="mult3">

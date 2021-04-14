@@ -117,6 +117,7 @@ let weeks = 4;
 let vatRate = 0.075;
 
 
+
 ResourceCat = ['backend engineer', 'frontend engineer', 'mobile engineer', 'qa engineer', 'product designer', 'product manager'];
 EngResourceLev = ['intern', 'associate engineer 1', 'associate engineer 2', 'software engineer 1', 'software engineer 2', 'senior engineer 1', 'senior engineer 2', 'senior engineer 3', 'principal engineer 1', 'principal engineer 2', 'chief technology officer'];
 
@@ -384,6 +385,8 @@ function calculate() {
     } else if (resLev10.value == EngResourceLev[10]) {
         chargeRate10 = ChargeRate.DH;
     }
+
+    
     //computations
     durMonth1 = dur1.value / weeks;
     total1 = durMonth1 * resNo1.value * util1.value * chargeRate1;

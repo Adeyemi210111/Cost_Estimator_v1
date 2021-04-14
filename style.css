@@ -236,3 +236,7 @@ border-radius: 8px;
     transform-origin: 0 0;
     margin: 0 -25% 0 0;
   }
+
+.hidden{
+    display: none;
+}
