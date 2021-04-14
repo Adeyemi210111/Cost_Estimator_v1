@@ -229,3 +229,10 @@ border-radius: 8px;
 #serial1, #serial2, #serial3, #serial4, #serial5, #serial6, #serial7, #serial8{
     padding-top: 20px;
 }
+
+.zoom-out { 
+    /* CSS zoom property not supported by html2canvas */
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    margin: 0 -25% 0 0;
+  }

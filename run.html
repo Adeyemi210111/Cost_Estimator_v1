@@ -11,6 +11,7 @@
         function generatePDF() {
           // Choose the element that our invoice is rendered in.
           let element = document.getElementById("invoice");
+          element.classList.add('zoom-out');
           // Choose the element and save the PDF for our user.
           html2pdf()
           .set({ html2canvas: { scale: 4 } })
