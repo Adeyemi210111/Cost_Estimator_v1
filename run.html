@@ -17,6 +17,7 @@
           let row6 = document.getElementById('row6');
           let row7 = document.getElementById('row7');
           let row8 = document.getElementById('row8');
+          let percent = document.querySelector('.percent');
           if (item6.value == '') {
               row6.classList.add('hidden');
               row7.classList.add('hidden');
@@ -34,6 +35,7 @@
           element.classList.add('zoom-out');
           check.style = 'display:none';
           check2.style = 'display:none';
+          percent.classList.add('hidden');
           // Choose the element and save the PDF for our user.
           html2pdf()
           .set({ html2canvas: { scale: 4 } })
@@ -101,6 +103,7 @@
                 <td>1</td>
                 <td>
                     <select name="categoryOption1" id="categoryOption1" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -112,6 +115,7 @@
                 <td>
                     <select name="resourceLevel1" id="resourceLevel1" class="mult2">
                         <option value="intern">Intern</option>
+                        <option value="" disabled selected></option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
                         <option value="associate engineer 2">Associate (Engineer/Product Designer/Product Manager) 2
@@ -149,6 +153,7 @@
                 <td>2</td>
                 <td>
                     <select name="categoryOption2" id="categoryOption2" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -159,6 +164,7 @@
                 </td>
                 <td>
                     <select name="resourceLevel2" id="resourceLevel2" class="mult2">
+                        <option value="" disabled selected></option>
                         <option value="intern">Intern</option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
@@ -197,6 +203,7 @@
                 <td>3</td>
                 <td>
                     <select name="categoryOption3" id="categoryOption3" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -207,6 +214,7 @@
                 </td>
                 <td>
                     <select name="resourceLevel3" id="resourceLevel3" class="mult2">
+                        <option value="" disabled selected></option>
                         <option value="intern">Intern</option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
@@ -245,6 +253,7 @@
                 <td>4</td>
                 <td>
                     <select name="categoryOption4" id="categoryOption4" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -255,6 +264,7 @@
                 </td>
                 <td>
                     <select name="resourceLevel4" id="resourceLevel4" class="mult2">
+                        <option value="" disabled selected></option>
                         <option value="intern">Intern</option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
@@ -293,6 +303,7 @@
                 <td>5</td>
                 <td>
                     <select name="categoryOption5" id="categoryOption5" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -303,6 +314,7 @@
                 </td>
                 <td>
                     <select name="resourceLevel5" id="resourceLevel5" class="mult2">
+                        <option value="" disabled selected></option>
                         <option value="intern">Intern</option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
@@ -341,6 +353,7 @@
                 <td>6</td>
                 <td>
                     <select name="categoryOption6" id="categoryOption6" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -351,6 +364,7 @@
                 </td>
                 <td>
                     <select name="resourceLevel6" id="resourceLevel6" class="mult2">
+                        <option value="" disabled selected></option>
                         <option value="intern">Intern</option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
@@ -389,6 +403,7 @@
                 <td>7</td>
                 <td>
                     <select name="categoryOption7" id="categoryOption7" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -399,6 +414,7 @@
                 </td>
                 <td>
                     <select name="resourceLevel7" id="resourceLevel7" class="mult2">
+                        <option value="" disabled selected></option>
                         <option value="intern">Intern</option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
@@ -437,6 +453,7 @@
                 <td>8</td>
                 <td>
                     <select name="categoryOption8" id="categoryOption8" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -447,6 +464,7 @@
                 </td>
                 <td>
                     <select name="resourceLevel8" id="resourceLevel8" class="mult2">
+                        <option value="" disabled selected></option>
                         <option value="intern">Intern</option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
@@ -485,6 +503,7 @@
                 <td>9</td>
                 <td>
                     <select name="categoryOption9" id="categoryOption9" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -495,6 +514,7 @@
                 </td>
                 <td>
                     <select name="resourceLevel2" id="resourceLevel9" class="mult2">
+                        <option value="" disabled selected></option>
                         <option value="intern">Intern</option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
@@ -533,6 +553,7 @@
                 <td>10</td>
                 <td>
                     <select name="categoryOption10" id="categoryOption10" class="mult1">
+                        <option value="" disabled selected></option>
                         <option value="backend engineer">Backend Engineer</option>
                         <option value="frontend engineer">Frontend Engineer</option>
                         <option value="mobile engineer">Mobile Engineer</option>
@@ -543,6 +564,7 @@
                 </td>
                 <td>
                     <select name="resourceLevel10" id="resourceLevel10" class="mult2">
+                        <option value="" disabled selected></option>
                         <option value="intern">Intern</option>
                         <option value="associate engineer 1">Associate (Engineer/Product Designer/Product Manager) 1
                         </option>
@@ -624,7 +646,7 @@
                 <th>S/N</th>
                 <th>Item</th>
                 <th>Quantity</th>
-                <th>Percentage</th>
+                <th class="percent">Percentage</th>
                 <th>Price</th>
                 <th>Amount</th>
             </tr>
@@ -637,7 +659,7 @@
                 <td>
                     <input type="number" value="1" id="quant1" class="mult1">
                 </td>
-                <td>
+                <td class="percent">
                     <input type="number" value="0.05" id="perc1" class="mult1">
                 </td>
                 <td>
@@ -656,7 +678,7 @@
                 <td>
                     <input type="number" value="1" id="quant2" class="mult1">
                 </td>
-                <td>
+                <td class="percent">
                     <input type="number" value="0.4" id="perc2" class="mult1">
                 </td>
                 <td>
@@ -675,7 +697,7 @@
                 <td>
                     <input type="number" value="1" id="quant3" class="mult1">
                 </td>
-                <td>
+                <td class="percent">
                     <input type="number" value="0.45" id="perc3" class="mult1">
                 </td>
                 <td>
@@ -694,7 +716,7 @@
                 <td>
                     <input type="number" value="1" id="quant4" class="mult1">
                 </td>
-                <td>
+                <td class="percent">
                     <input type="number" value="0.1" id="perc4" class="mult1">
                 </td>
                 <td>
@@ -713,7 +735,7 @@
                 <td>
                     <input type="number" value="1" id="quant5" class="mult1">
                 </td>
-                <td>
+                <td class="percent">
                     <input type="number" value="0.00" id="perc5" class="mult1">
                 </td>
                 <td>
@@ -732,7 +754,7 @@
                 <td>
                     <input type="number" value="1" id="quant6" class="mult1">
                 </td>
-                <td>
+                <td class="percent">
                     <input type="number" id="perc6" class="mult1">
                 </td>
                 <td>
@@ -751,7 +773,7 @@
                 <td>
                     <input type="number" value="1" id="quant7" class="mult1">
                 </td>
-                <td>
+                <td class="percent">
                     <input type="number" id="perc7" class="mult1">
                 </td>
                 <td>
@@ -770,7 +792,7 @@
                 <td>
                     <input type="number" value="1" id="quant8" class="mult1">
                 </td>
-                <td>
+                <td class="percent">
                     <input type="number" id="perc8" class="mult1">
                 </td>
                 <td>

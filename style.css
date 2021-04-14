@@ -232,7 +232,7 @@ border-radius: 8px;
 
 .zoom-out { 
     /* CSS zoom property not supported by html2canvas */
-    transform: scale(0.5);
+    transform: scale(0.6);
     transform-origin: 0 0;
     margin: 0 -25% 0 0;
   }

@@ -136,7 +136,7 @@ function calculate() {
     // show.innerHTML = ChargeRate.AE2
     let chargeRate1, chargeRate2, chargeRate3, chargeRate4, chargeRate5, chargeRate6, chargeRate7, chargeRate8, chargeRate9, chargeRate10, durMonth1, durMonth2, durMonth3, durMonth4, durMonth5, durMonth6, durMonth7, durMonth8, durMonth9, durMonth10, durMonth11, durMonth12, total1, total2, total3, total4, total5, total6, total7, total8, total9, total10, total11, total12, directCost, leadCost, totalCost, incidentals, markup, commission, findFee, price;
     let chargeRate11 = ChargeRate.LT;
-    let chargeRate12 = ChargeRate.LT;
+    let chargeRate12 = ChargeRate.LT;   
     //first row
     if (resLev1.value == EngResourceLev[0]) {
         chargeRate1 = ChargeRate.int;
@@ -160,6 +160,8 @@ function calculate() {
         chargeRate1 = ChargeRate.PE2;
     } else if (resLev1.value == EngResourceLev[10]) {
         chargeRate1 = ChargeRate.DH;
+    }else{
+        chargeRate1 = 0;
     }
     //second row
     if (resLev2.value == EngResourceLev[0]) {
@@ -184,6 +186,8 @@ function calculate() {
         chargeRate2 = ChargeRate.PE2;
     } else if (resLev2.value == EngResourceLev[10]) {
         chargeRate2 = ChargeRate.DH;
+    }else{
+        chargeRate2 = 0;
     }
 
     //Third row
@@ -209,6 +213,8 @@ function calculate() {
         chargeRate3 = ChargeRate.PE2;
     } else if (resLev3.value == EngResourceLev[10]) {
         chargeRate3 = ChargeRate.DH;
+    }else{
+        chargeRate3 = 0;
     }
 
     //fourth row
@@ -234,6 +240,8 @@ function calculate() {
         chargeRate4 = ChargeRate.PE2;
     } else if (resLev4.value == EngResourceLev[10]) {
         chargeRate4 = ChargeRate.DH;
+    }else{
+        chargeRate4 = 0;
     }
 
     //fifth row
@@ -259,6 +267,8 @@ function calculate() {
         chargeRate5 = ChargeRate.PE2;
     } else if (resLev5.value == EngResourceLev[10]) {
         chargeRate5 = ChargeRate.DH;
+    }else{
+        chargeRate5 = 0;
     }
 
     //Sixth row
@@ -284,6 +294,8 @@ function calculate() {
         chargeRate6 = ChargeRate.PE2;
     } else if (resLev6.value == EngResourceLev[10]) {
         chargeRate6 = ChargeRate.DH;
+    }else{
+        chargeRate6 = 0;
     }
 
     //Seventh row
@@ -309,6 +321,8 @@ function calculate() {
         chargeRate7 = ChargeRate.PE2;
     } else if (resLev7.value == EngResourceLev[10]) {
         chargeRate7 = ChargeRate.DH;
+    }else{
+        chargeRate7 = 0;
     }
 
     //Eighth row
@@ -334,6 +348,8 @@ function calculate() {
         chargeRate8 = ChargeRate.PE2;
     } else if (resLev8.value == EngResourceLev[10]) {
         chargeRate8 = ChargeRate.DH;
+    }else{
+        chargeRate8 = 0;
     }
 
     //Ninth row
@@ -359,6 +375,8 @@ function calculate() {
         chargeRate9 = ChargeRate.PE2;
     } else if (resLev9.value == EngResourceLev[10]) {
         chargeRate9 = ChargeRate.DH;
+    }else{
+        chargeRate9 = 0;
     }
 
     //Tenth row
@@ -384,6 +402,8 @@ function calculate() {
         chargeRate10 = ChargeRate.PE2;
     } else if (resLev10.value == EngResourceLev[10]) {
         chargeRate10 = ChargeRate.DH;
+    }else{
+        chargeRate10 = 0;
     }
 
     
@@ -478,13 +498,14 @@ function calculate() {
     price8.innerHTML = '₦' + calcprice8;
     calcamount8 = calcprice8 * quant1.value;
     amount8.innerHTML = '₦' + calcamount8;
-    show.innerHTML = 'total cost:' + totalCost + 'incidentals:' + incidentals + 'final cost:' + finalCost + 'markup:' + markup + 'markupvalue:' + markupval + 'commission:' + commission + 'finders fee' + findFee + 'price:' + price;
-    
+    // show.innerHTML = 'total cost:' + totalCost + 'incidentals:' + incidentals + 'final cost:' + finalCost + 'markup:' + markup + 'markupvalue:' + markupval + 'commission:' + commission + 'finders fee' + findFee + 'price:' + price;
+    // show.innerHTML = chargeRate1;
     sub = calcamount1 + calcamount2 + calcamount3 + calcamount4 + calcamount5 + calcamount6 + calcamount7 + calcamount8;
     sum = sub.toFixed(2);
     subTotal.innerHTML = '₦' + sum;
     vatamount = vatRate * sum;
-    vat.innerHTML =  '₦' + vatamount;
+    vata = vatamount.toFixed(2);
+    vat.innerHTML =  '₦' + vata;
     totaldev = sub + vatamount;
     totaldevel = totaldev.toFixed(2);
     totalDevCost.innerHTML = '₦' + totaldevel;
