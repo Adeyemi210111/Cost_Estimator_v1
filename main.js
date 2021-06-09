@@ -114,7 +114,8 @@ let subTotal = document.getElementById('subTotal');
 let vat = document.getElementById('VAT');
 let totalDevCost = document.getElementById('totalDevCost');
 let weeks = 4;
-let vatRate = 0.075;
+let vatRate = document.getElementById('rate');
+
 
 
 
@@ -499,11 +500,11 @@ function calculate() {
     calcamount8 = calcprice8 * quant1.value;
     amount8.innerHTML = '₦' + calcamount8;
     // show.innerHTML = 'total cost:' + totalCost + 'incidentals:' + incidentals + 'final cost:' + finalCost + 'markup:' + markup + 'markupvalue:' + markupval + 'commission:' + commission + 'finders fee' + findFee + 'price:' + price;
-    // show.innerHTML = chargeRate1;
+    // show.innerHTML = vatRate.value / 100;
     sub = calcamount1 + calcamount2 + calcamount3 + calcamount4 + calcamount5 + calcamount6 + calcamount7 + calcamount8;
     sum = sub.toFixed(2);
     subTotal.innerHTML = '₦' + sum;
-    vatamount = vatRate * sum;
+    vatamount = vatRate.value / 100 * sum;
     vata = vatamount.toFixed(2);
     vat.innerHTML =  '₦' + vata;
     totaldev = sub + vatamount;

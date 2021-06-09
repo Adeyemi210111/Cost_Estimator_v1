@@ -27,6 +27,7 @@
           let perchead6 = document.getElementById('perchead6');
           let perchead7 = document.getElementById('perchead7');
           let perchead8 = document.getElementById('perchead8');
+          let rate = document.getElementById('rate');
           if (item6.value == '') {
               row6.classList.add('hidden');
               row7.classList.add('hidden');
@@ -54,6 +55,7 @@
              perchead6.classList.add('hidden');
              perchead7.classList.add('hidden');
              perchead8.classList.add('hidden');
+             rate.classList.add('hidden');
           // Choose the element and save the PDF for our user.
           html2pdf()
           .set({ html2canvas: { scale: 4 } })
@@ -81,7 +83,7 @@
         <input type="text" id="Pname" class="basic_input" placeholder="Project Name"> 
         <input type="text" id="Cname" class="basic_input" placeholder="Client's Name">  
         <input type="text" id="PM" class="basic_input" placeholder="Product Manager">  
-        <input type="number" id="PD" class="basic_input" placeholder="Project Duration"><br>  
+        <input type="number" id="PD" class="basic_input" placeholder="Project Duration (Weeks)"><br>  
         <select name="Pscale" id="Pscale" class="mult">
             <option value="" disabled selected>Project Scale</option>
             <option value="smallScale">Small Scale</option>
@@ -128,6 +130,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -178,6 +182,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -228,6 +234,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -278,6 +286,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -328,6 +338,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -378,6 +390,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -428,6 +442,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -478,6 +494,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -528,6 +546,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -578,6 +598,8 @@
                         <option value="qa engineer">Quality Assurance Engineer</option>
                         <option value="Product Designer">Product Designer</option>
                         <option value="Product Manager">Product Manager</option>
+                        <option value="Product Manager">Desktop Engineer</option>
+                        <option value="Product Manager">Data Engineer</option>
                     </select>
                 </td>
                 <td>
@@ -846,11 +868,11 @@
                    
                 </td>
                 <td>
-                    
+                    <input type="number" id="rate" placeholder="Enter Vat rate here" class="mult1" value="7.5">
                 </td>
                 <td>
                     <!-- <input type="number" id="perc8" class="mult1"> -->
-                    <span>VAT (7.5% of Sub - Total)</span>
+                    <span>VAT (% of Sub - Total)</span>
                 </td>
                 <td>
                     <!-- <div></div> -->
