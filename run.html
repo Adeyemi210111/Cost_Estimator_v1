@@ -17,7 +17,16 @@
           let row6 = document.getElementById('row6');
           let row7 = document.getElementById('row7');
           let row8 = document.getElementById('row8');
-          let percent = document.querySelector('.percent');
+        //   let percent = document.querySelector('.percent');
+          let perchead = document.getElementById('perchead');
+          let perchead1 = document.getElementById('perchead1');
+          let perchead2 = document.getElementById('perchead2');
+          let perchead3 = document.getElementById('perchead3');
+          let perchead4 = document.getElementById('perchead4');
+          let perchead5 = document.getElementById('perchead5');
+          let perchead6 = document.getElementById('perchead6');
+          let perchead7 = document.getElementById('perchead7');
+          let perchead8 = document.getElementById('perchead8');
           if (item6.value == '') {
               row6.classList.add('hidden');
               row7.classList.add('hidden');
@@ -35,7 +44,16 @@
           element.classList.add('zoom-out');
           check.style = 'display:none';
           check2.style = 'display:none';
-          percent.classList.add('hidden');
+            //   percent.style = 'display:none';
+             perchead.classList.add('hidden');
+             perchead1.classList.add('hidden');
+             perchead2.classList.add('hidden');
+             perchead3.classList.add('hidden');
+             perchead4.classList.add('hidden');
+             perchead5.classList.add('hidden');
+             perchead6.classList.add('hidden');
+             perchead7.classList.add('hidden');
+             perchead8.classList.add('hidden');
           // Choose the element and save the PDF for our user.
           html2pdf()
           .set({ html2canvas: { scale: 4 } })
@@ -646,7 +664,7 @@
                 <th>S/N</th>
                 <th>Item</th>
                 <th>Quantity</th>
-                <th class="percent">Percentage</th>
+                <th id="perchead">Percentage</th>
                 <th>Price</th>
                 <th>Amount</th>
             </tr>
@@ -659,7 +677,7 @@
                 <td>
                     <input type="number" value="1" id="quant1" class="mult1">
                 </td>
-                <td class="percent">
+                <td class="percent" id="perchead1">
                     <input type="number" value="0.05" id="perc1" class="mult1">
                 </td>
                 <td>
@@ -678,7 +696,7 @@
                 <td>
                     <input type="number" value="1" id="quant2" class="mult1">
                 </td>
-                <td class="percent">
+                <td class="percent" id="perchead2">
                     <input type="number" value="0.4" id="perc2" class="mult1">
                 </td>
                 <td>
@@ -697,7 +715,7 @@
                 <td>
                     <input type="number" value="1" id="quant3" class="mult1">
                 </td>
-                <td class="percent">
+                <td class="percent" id="perchead3">
                     <input type="number" value="0.45" id="perc3" class="mult1">
                 </td>
                 <td>
@@ -716,7 +734,7 @@
                 <td>
                     <input type="number" value="1" id="quant4" class="mult1">
                 </td>
-                <td class="percent">
+                <td class="percent" id="perchead4">
                     <input type="number" value="0.1" id="perc4" class="mult1">
                 </td>
                 <td>
@@ -735,7 +753,7 @@
                 <td>
                     <input type="number" value="1" id="quant5" class="mult1">
                 </td>
-                <td class="percent">
+                <td class="percent" id="perchead5">
                     <input type="number" value="0.00" id="perc5" class="mult1">
                 </td>
                 <td>
@@ -754,7 +772,7 @@
                 <td>
                     <input type="number" value="1" id="quant6" class="mult1">
                 </td>
-                <td class="percent">
+                <td class="percent" id="perchead6">
                     <input type="number" id="perc6" class="mult1">
                 </td>
                 <td>
@@ -773,7 +791,7 @@
                 <td>
                     <input type="number" value="1" id="quant7" class="mult1">
                 </td>
-                <td class="percent">
+                <td class="percent" id="perchead7">
                     <input type="number" id="perc7" class="mult1">
                 </td>
                 <td>
@@ -792,7 +810,7 @@
                 <td>
                     <input type="number" value="1" id="quant8" class="mult1">
                 </td>
-                <td class="percent">
+                <td class="percent" id="perchead8">
                     <input type="number" id="perc8" class="mult1">
                 </td>
                 <td>
@@ -811,14 +829,15 @@
                     
                 </td>
                 <td>
-                    <!-- <input type="number" id="perc8" class="mult1"> -->
-                    <span>Sub-Total</span>
+                   <!-- <input type="number" id="perc8" class="mult1"> -->
+                   <span>Sub-Total</span> 
                 </td>
                 <td>
-                    <div></div>
-                </td>
-                <td>
+                    <!-- <div></div> -->
                     <div id="subTotal" class="mult1"></div>
+                </td>
+                <td>
+                    
                 </td>
             </tr>
             <tr class="test">
@@ -834,10 +853,11 @@
                     <span>VAT (7.5% of Sub - Total)</span>
                 </td>
                 <td>
-                    <div></div>
+                    <!-- <div></div> -->
+                    <div id="VAT" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="VAT" class="mult1"></div>
+                    
                 </td>
             </tr>
             <tr class="test">
@@ -853,10 +873,11 @@
                     <span>Total Dev Cost</span>
                 </td>
                 <td>
-                    <div></div>
+                    <!-- <div></div> -->
+                    <div id="totalDevCost" class="mult1"></div>
                 </td>
                 <td>
-                    <div id="totalDevCost" class="mult1"></div>
+                    
                 </td>
             </tr>
         </table>
