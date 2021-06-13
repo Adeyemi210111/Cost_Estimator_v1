@@ -465,7 +465,10 @@ function calculate() {
             
             if (total[i] != 0) {
                 console.log(caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toFixed(2));
-                show.innerHTML += '<li>' + caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toFixed(2) + '</li>';
+                if (breakdown.checked == true) {
+                    show.innerHTML += '<li>' + caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toFixed(2) + '</li>';
+                }
+                
             }
         }
    
