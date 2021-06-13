@@ -1,3 +1,4 @@
+
 let Pname = document.getElementById('Pname');
 let Cname = document.getElementById('Cname');
 let PM = document.getElementById('PM');
@@ -115,6 +116,7 @@ let vat = document.getElementById('VAT');
 let totalDevCost = document.getElementById('totalDevCost');
 let weeks = 4;
 let vatRate = document.getElementById('rate');
+
 
 
 
@@ -457,7 +459,21 @@ function calculate() {
     }else{
         findFee = 0;
     }
-
+    let total = [total1, total2, total3, total4, total5,total6, total7, total8, total9, total10];
+    let caty = [catOpt1, catOpt2, catOpt3, catOpt4, catOpt5, catOpt6, catOpt7, catOpt8, catOpt9, catOpt10];
+        for (let i = 0; i < total.length; i++) {
+            
+            if (total[i] != 0) {
+                console.log(caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toFixed(2));
+                show.innerHTML += '<li>' + caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toFixed(2) + '</li>';
+            }
+        }
+   
+        //     if (catOpt1 == ' ') {
+        //     console.log('empty');
+        // }else{
+        //     console.log(catOpt1);
+        // }
     price = finalCost + markupval + commission + findFee;
     calcuprice1 = price * perc1.value;
     calcprice1 = calcuprice1.toFixed(2);

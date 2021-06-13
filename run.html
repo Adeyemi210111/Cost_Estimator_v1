@@ -110,7 +110,7 @@
 
     <section id="resourceList">
         <h1>Internal Resources</h1>
-        <table>
+        <table id="resTable">
             <tr class="t-head">
                 <th>S/N</th>
                 <th>Resource Category</th>
@@ -902,16 +902,17 @@
                     
                 </td>
             </tr>
-        </table>
+        </table> <br>
+        <ul id="show"></ul>
         <!-- <div id="subTotal"></div> -->
         <!-- <div id="VAT"></div> -->
         <!-- <div id="totalDevCost"></div> -->
          <!-- Generate Estimate -->
-    <button type="submit" id="check">Generate Estimate</button><br>
+        <button type="submit" id="check">Generate Estimate</button><br>
         <button onclick="generatePDF()" id="check2">Generate PDF</button>
     </section>
     
-    <div id="show"></div>
+   
 
 </div>
 <script src="main.js"></script>
