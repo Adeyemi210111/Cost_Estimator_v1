@@ -245,3 +245,17 @@ border-radius: 8px;
     text-align: left;
     text-transform: capitalize;
 }
+
+
+
+#invoice img{
+    width: 200px;
+    height: 60px;
+    margin-right: -1400px;
+    
+}
+
+#invoice table{
+    width: 100%;
+    
+}

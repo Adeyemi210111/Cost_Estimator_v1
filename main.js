@@ -459,6 +459,7 @@ function calculate() {
     }else{
         findFee = 0;
     }
+    
     let total = [total1, total2, total3, total4, total5,total6, total7, total8, total9, total10];
     let caty = [catOpt1, catOpt2, catOpt3, catOpt4, catOpt5, catOpt6, catOpt7, catOpt8, catOpt9, catOpt10];
         for (let i = 0; i < total.length; i++) {
@@ -467,6 +468,7 @@ function calculate() {
                 console.log(caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toFixed(2));
                 if (breakdown.checked == true) {
                     show.innerHTML += '<li>' + caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toFixed(2) + '</li>';
+                    
                 }
                 
             }
@@ -479,55 +481,56 @@ function calculate() {
         // }
     price = finalCost + markupval + commission + findFee;
     calcuprice1 = price * perc1.value;
-    calcprice1 = calcuprice1.toFixed(2);
+    calcprice1 = calcuprice1.toLocaleString();
     price1.innerHTML = '₦' + calcprice1;
-    calcamount1 = calcprice1 * quant1.value;
-    amount1.innerHTML = '₦' + calcamount1;
+    calcamount1 = calcuprice1 * quant1.value;
+    amount1.innerHTML = '₦' + calcamount1.toLocaleString();
     calcuprice2 = price * perc2.value;
-    calcprice2 = calcuprice2.toFixed(2);
+    calcprice2 = calcuprice2.toLocaleString();
     price2.innerHTML = '₦' + calcprice2;
-    calcamount2 = calcprice2 * quant2.value;
-    amount2.innerHTML = '₦' + calcamount2;
+    calcamount2 = calcuprice2 * quant2.value;
+    amount2.innerHTML = '₦' + calcamount2.toLocaleString();
     calcuprice3 = price * perc3.value;
-    calcprice3 = calcuprice3.toFixed(2);
+    calcprice3 = calcuprice3.toLocaleString();
     price3.innerHTML = '₦' + calcprice3;
-    calcamount3 = calcprice3 * quant3.value;
-    amount3.innerHTML = '₦' + calcamount3;
+    calcamount3 = calcuprice3 * quant3.value;
+    amount3.innerHTML = '₦' + calcamount3.toLocaleString();
     calcuprice4 = price * perc4.value;
-    calcprice4 = calcuprice4.toFixed(2);
+    calcprice4 = calcuprice4.toLocaleString();
     price4.innerHTML = '₦' + calcprice4;
-    calcamount4 = calcprice4 * quant4.value;
-    amount4.innerHTML = '₦' + calcamount4;
+    calcamount4 = calcuprice4 * quant4.value;
+    amount4.innerHTML = '₦' + calcamount4.toLocaleString();
     calcuprice5 = price * perc5.value;
-    calcprice5 = calcuprice5.toFixed(2);
+    calcprice5 = calcuprice5.toLocaleString();
     price5.innerHTML = '₦' + calcprice5;
-    calcamount5 = calcprice5 * quant5.value;
-    amount5.innerHTML = '₦' + calcamount5;
+    calcamount5 = calcuprice5 * quant5.value;
+    amount5.innerHTML = '₦' + calcamount5.toLocaleString();
     calcuprice6 = price * perc6.value;
-    calcprice6 = calcuprice6.toFixed(2);
+    calcprice6 = calcuprice6.toLocaleString();
     price6.innerHTML = '₦' + calcprice6;
-    calcamount6 = calcprice6 * quant6.value;
-    amount6.innerHTML = '₦' + calcamount6;
+    calcamount6 = calcuprice6 * quant6.value;
+    amount6.innerHTML = '₦' + calcamount6.toLocaleString();
     calcuprice7 = price * perc7.value;
-    calcprice7 = calcuprice7.toFixed(2);
+    calcprice7 = calcuprice7.toLocaleString();
     price7.innerHTML = '₦' + calcprice7;
-    calcamount7 = calcprice7 * quant7.value;
-    amount7.innerHTML = '₦' + calcamount7;
+    calcamount7 = calcuprice7 * quant7.value;
+    amount7.innerHTML = '₦' + calcamount7.toLocaleString();
     calcuprice8 = price * perc8.value;
-    calcprice8 = calcuprice8.toFixed(2);
+    calcprice8 = calcuprice8.toLocaleString();
     price8.innerHTML = '₦' + calcprice8;
-    calcamount8 = calcprice8 * quant1.value;
-    amount8.innerHTML = '₦' + calcamount8;
+    calcamount8 = calcuprice8 * quant1.value;
+    amount8.innerHTML = '₦' + calcamount8.toLocaleString();
     // show.innerHTML = 'total cost:' + totalCost + 'incidentals:' + incidentals + 'final cost:' + finalCost + 'markup:' + markup + 'markupvalue:' + markupval + 'commission:' + commission + 'finders fee' + findFee + 'price:' + price;
     // show.innerHTML = vatRate.value / 100;
+    // show.innerHTML = 'lead 1 is' + total1 + ' ' + 'lead 2 is' + total2 + ' ' + 'totallead is:' + leadCost;
     sub = calcamount1 + calcamount2 + calcamount3 + calcamount4 + calcamount5 + calcamount6 + calcamount7 + calcamount8;
-    sum = sub.toFixed(2);
+    sum = sub.toLocaleString();
     subTotal.innerHTML = '₦' + sum;
-    vatamount = vatRate.value / 100 * sum;
-    vata = vatamount.toFixed(2);
+    vatamount = vatRate.value / 100 * sub;
+    vata = vatamount.toLocaleString();
     vat.innerHTML =  '₦' + vata;
     totaldev = sub + vatamount;
-    totaldevel = totaldev.toFixed(2);
+    totaldevel = totaldev.toLocaleString();
     totalDevCost.innerHTML = '₦' + totaldevel;
 }
 

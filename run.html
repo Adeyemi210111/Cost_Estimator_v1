@@ -17,6 +17,7 @@
           let row6 = document.getElementById('row6');
           let row7 = document.getElementById('row7');
           let row8 = document.getElementById('row8');
+          let invhead = document.getElementById('inv_head');
         //   let percent = document.querySelector('.percent');
           let perchead = document.getElementById('perchead');
           let perchead1 = document.getElementById('perchead1');
@@ -28,6 +29,7 @@
           let perchead7 = document.getElementById('perchead7');
           let perchead8 = document.getElementById('perchead8');
           let rate = document.getElementById('rate');
+          invhead.style.display = 'none';
           if (item6.value == '') {
               row6.classList.add('hidden');
               row7.classList.add('hidden');
@@ -655,7 +657,7 @@
            
            <tr>
                <td>1</td>
-               <td>Technology Lead</td>
+               <td>CTO</td>
                <td>
                    <input type="number" value="1" id="util11" class="mult1">
                </td>
@@ -666,7 +668,7 @@
            
            <tr>
                <td>2</td>
-               <td>Product Innovation Lead</td>
+               <td>CPIO</td>
                <td>
                    <input type="number" value="1" id="util12" class="mult1">
                </td>
@@ -681,8 +683,10 @@
    
 
     <section id="invoice"> 
-        <h1>Invoice Items</h1>
+        <img src="images/PRUNEDGE LOGO.png" alt=""> <br>
+        <h1 id="inv_head">Invoice Items</h1>
         <table>
+            
             <tr class="t-head">
                 <th>S/N</th>
                 <th>Item</th>
@@ -904,7 +908,10 @@
                 </td>
             </tr>
         </table> <br>
-        <ul id="show"></ul>
+        
+            <ul id="show"></ul>
+        
+        
         <!-- <div id="subTotal"></div> -->
         <!-- <div id="VAT"></div> -->
         <!-- <div id="totalDevCost"></div> -->
