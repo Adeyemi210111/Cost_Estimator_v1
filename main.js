@@ -468,7 +468,8 @@ function calculate() {
             if (total[i] != 0) {
                 console.log(caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toFixed(2));
                 if (breakdown.checked == true) {
-                    show.innerHTML += '<li>' + caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toFixed(2) + '</li>';
+                    breakPart.style.display = 'block';
+                    show.innerHTML += '<li>' + caty[i].value + ' ' + '=' + ' ' + '₦' + total[i].toLocaleString() + '</li>';
                     
                 }
                 

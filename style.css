@@ -255,7 +255,6 @@ border-radius: 8px;
 #invoice img{
     width: 200px;
     height: 60px;
-    margin-right: -1100px;
     display: none;
 }
 
@@ -276,4 +275,14 @@ border-radius: 8px;
 #subTotal, #totalDevCost{
     background: #0050C8;
     color: white;
+}
+
+#breakHead{
+    background: #0050C8;
+    color: white;
+}
+
+#breakPart{
+    width: 300px;
+    display: none;
 }
