@@ -191,6 +191,10 @@ color:black;
 
 .t-head{
     font-size: 20px;
+    background: #0050C8;
+    height: 50px;
+    font-weight: bold;
+    color: white;
 }
 
 #check{
@@ -251,11 +255,25 @@ border-radius: 8px;
 #invoice img{
     width: 200px;
     height: 60px;
-    margin-right: -1400px;
-    
+    margin-right: -1100px;
+    display: none;
 }
 
 #invoice table{
     width: 100%;
     
+}
+
+#projName{
+    /* margin-left: -500px; */
+    font-size: 40px;
+    font-weight: bold;
+    color: blue;
+    text-align: left;
+    display: none;
+}
+
+#subTotal, #totalDevCost{
+    background: #0050C8;
+    color: white;
 }

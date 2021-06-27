@@ -116,6 +116,7 @@ let vat = document.getElementById('VAT');
 let totalDevCost = document.getElementById('totalDevCost');
 let weeks = 4;
 let vatRate = document.getElementById('rate');
+let projName = document.getElementById('projName');
 
 
 
@@ -532,5 +533,6 @@ function calculate() {
     totaldev = sub + vatamount;
     totaldevel = totaldev.toLocaleString();
     totalDevCost.innerHTML = '₦' + totaldevel;
+    projName.innerHTML = Pname.value + ' ' + '-' + ' ' + 'Project Cost Estimate';
 }
 

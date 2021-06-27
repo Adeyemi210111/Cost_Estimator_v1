@@ -18,6 +18,8 @@
           let row7 = document.getElementById('row7');
           let row8 = document.getElementById('row8');
           let invhead = document.getElementById('inv_head');
+          let projName = document.getElementById('projName');
+          let invImg = document.getElementById('invImg');
         //   let percent = document.querySelector('.percent');
           let perchead = document.getElementById('perchead');
           let perchead1 = document.getElementById('perchead1');
@@ -30,6 +32,8 @@
           let perchead8 = document.getElementById('perchead8');
           let rate = document.getElementById('rate');
           invhead.style.display = 'none';
+          projName.style.display = 'block';
+          invImg.style.display = 'block';
           if (item6.value == '') {
               row6.classList.add('hidden');
               row7.classList.add('hidden');
@@ -683,7 +687,8 @@
    
 
     <section id="invoice"> 
-        <img src="images/PRUNEDGE LOGO.png" alt=""> <br>
+        <img src="images/PRUNEDGE LOGO.png" alt="" id="invImg"> <br> <br>
+        <div id="projName">Project Name</div> <br>
         <h1 id="inv_head">Invoice Items</h1>
         <table>
             
