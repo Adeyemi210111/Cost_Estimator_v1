@@ -117,6 +117,7 @@ let totalDevCost = document.getElementById('totalDevCost');
 let weeks = 4;
 let vatRate = document.getElementById('rate');
 let projName = document.getElementById('projName');
+let others = document.getElementById('others');
 
 
 
@@ -475,7 +476,10 @@ function calculate() {
                 
             }
         }
-   
+    if (breakdown.checked == true) {
+        others.innerHTML = '<li>' + 'Total Resource Cost = ' + '₦' + directCost.toLocaleString() + '</li>' + '<li>' + 'Incidental Cost = ' + '₦' + incidentals.toLocaleString() + '</li>' + '<li>' + 'Leadership Cost = ' + '₦' + leadCost.toLocaleString() + '</li>' + '<li>' + 'Markup = ' + '₦' + markupval.toLocaleString() + '</li>';
+    }
+        
         //     if (catOpt1 == ' ') {
         //     console.log('empty');
         // }else{
