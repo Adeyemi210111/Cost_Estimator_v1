@@ -283,6 +283,7 @@ border-radius: 8px;
 }
 
 #breakPart{
-    width: 300px;
+    width: 100%;
     display: none;
+    text-align: left;
 }
