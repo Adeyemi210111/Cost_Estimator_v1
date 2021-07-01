@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    
 }
 
 #container{
@@ -280,10 +281,11 @@ border-radius: 8px;
 #breakHead{
     background: #0050C8;
     color: white;
+    text-align: center;
 }
 
 #breakPart{
-    width: 100%;
+    width: 400px;
     display: none;
     text-align: left;
 }
