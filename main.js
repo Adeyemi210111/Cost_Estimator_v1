@@ -123,7 +123,7 @@ let others = document.getElementById('others');
 
 
 
-ResourceCat = ['backend engineer', 'frontend engineer', 'mobile engineer', 'qa engineer', 'product designer', 'product manager'];
+ResourceCat = ['backend engineer', 'frontend engineer', 'mobile engineer', 'qa engineer', 'product designer', 'product manager', 'WordPress Engineer'];
 EngResourceLev = ['intern', 'associate engineer 1', 'associate engineer 2', 'software engineer 1', 'software engineer 2', 'senior engineer 1', 'senior engineer 2', 'senior engineer 3', 'principal engineer 1', 'principal engineer 2', 'chief technology officer'];
 
 DesResourceLev = ['intern', 'associate product designer 1', 'associate product designer 2', 'product designer 1', 'product designer 2', 'senior product designer 1', 'senior product designer 2', 'senior product designer 3', 'principal product designer 1', 'principal product designer 2', 'chief technology officer'];
