@@ -59,10 +59,35 @@ let resLev10 = document.getElementById('resourceLevel10');
 let dur10 = document.getElementById('duration10');
 let resNo10 = document.getElementById('resNo10');
 let util10 = document.getElementById('util10');
+let catOpt11 = document.getElementById('categoryOption11');
+let resLev11 = document.getElementById('resourceLevel11');
 let dur11 = document.getElementById('duration11');
+let resNo11 = document.getElementById('resNo11');
 let util11 = document.getElementById('util11');
+let catOpt12 = document.getElementById('categoryOption12');
+let resLev12 = document.getElementById('resourceLevel12');
 let dur12 = document.getElementById('duration12');
+let resNo12 = document.getElementById('resNo12');
 let util12 = document.getElementById('util12');
+let catOpt13 = document.getElementById('categoryOption13');
+let resLev13 = document.getElementById('resourceLevel13');
+let dur13 = document.getElementById('duration13');
+let resNo13 = document.getElementById('resNo13');
+let util13 = document.getElementById('util13');
+let catOpt14 = document.getElementById('categoryOption14');
+let resLev14 = document.getElementById('resourceLevel14');
+let dur14 = document.getElementById('duration14');
+let resNo14 = document.getElementById('resNo14');
+let util14 = document.getElementById('util14');
+let catOpt15 = document.getElementById('categoryOption15');
+let resLev15 = document.getElementById('resourceLevel15');
+let dur15 = document.getElementById('duration15');
+let resNo15 = document.getElementById('resNo15');
+let util15 = document.getElementById('util15');
+let durLead1 = document.getElementById('durationLead1');
+let utilLead1 = document.getElementById('utilLead1');
+let durLead2 = document.getElementById('durationLead2');
+let utilLead2 = document.getElementById('utilLead2');
 let serial1 = document.getElementById('serial1');
 let item1 = document.getElementById('item1');
 let quant1 = document.getElementById('quant1');
@@ -130,7 +155,7 @@ DesResourceLev = ['intern', 'associate product designer 1', 'associate product d
 
 ManResourceLev = ['intern', 'associate product manager 1', 'associate product manager 2', 'product manager 1', 'product manager 2', 'senior product manager 1', 'senior product manager 2', 'senior product manager 3', 'principal product manager 1', 'principal product manager 2', 'chief technology officer'];
 
-ChargeRate = { int: 61667.70, AE1: 220067.7, AE2: 332951.03, SOE1: 497934.37, SOE2: 610817.7, SE1: 784484.37, SE2: 897367.7, SE3: 1027567.7, PE1: 1227334.37, PE2: 1357584.37, DH: 1748334.37, LT: 1262067.7};
+ChargeRate = { int: 95063.33, AE1: 253463.33, AE2: 366346.66, SOE1: 531330, SOE2: 644213.33, SE1: 817880, SE2: 930763.33, SE3: 1060963.33, PE1: 1260730, PE2: 1390980, DH: 1781730, LT: 1295463.33};
 
 
 check.addEventListener('click', calculate);
@@ -139,7 +164,7 @@ check.addEventListener('click', calculate);
 function calculate() {
     // result = ResourceCat[1];
     // show.innerHTML = ChargeRate.AE2
-    let chargeRate1, chargeRate2, chargeRate3, chargeRate4, chargeRate5, chargeRate6, chargeRate7, chargeRate8, chargeRate9, chargeRate10, durMonth1, durMonth2, durMonth3, durMonth4, durMonth5, durMonth6, durMonth7, durMonth8, durMonth9, durMonth10, durMonth11, durMonth12, total1, total2, total3, total4, total5, total6, total7, total8, total9, total10, total11, total12, directCost, leadCost, totalCost, incidentals, markup, commission, findFee, price;
+    let chargeRate1, chargeRate2, chargeRate3, chargeRate4, chargeRate5, chargeRate6, chargeRate7, chargeRate8, chargeRate9, chargeRate10, chargeRate_11, chargeRate_12, chargeRate_13, chargeRate_14, chargeRate_15, durMonth1, durMonth2, durMonth3, durMonth4, durMonth5, durMonth6, durMonth7, durMonth8, durMonth9, durMonth10, durMonth11, durMonth12, durMonth13, durMonth14, durMonth15, durLead1, durLead2, total1, total2, total3, total4, total5, total6, total7, total8, total9, total10, total11, total12, total13, total14, total15, totalLead1, totalLead2, directCost, leadCost, totalCost, incidentals, markup, commission, findFee, price;
     let chargeRate11 = ChargeRate.LT;
     let chargeRate12 = ChargeRate.LT;   
     //first row
@@ -411,6 +436,141 @@ function calculate() {
         chargeRate10 = 0;
     }
 
+    //Eleventh row
+    if (resLev11.value == EngResourceLev[0]) {
+        chargeRate_11 = ChargeRate.int;
+    } else if (resLev11.value == EngResourceLev[1]) {
+        chargeRate_11 = ChargeRate.AE1;
+    } else if (resLev11.value == EngResourceLev[2]) {
+        chargeRate_11 = ChargeRate.AE2;
+    } else if (resLev11.value == EngResourceLev[3]) {
+        chargeRate_11 = ChargeRate.SOE1;
+    } else if (resLev11.value == EngResourceLev[4]) {
+        chargeRate_11 = ChargeRate.SOE2;
+    } else if (resLev11.value == EngResourceLev[5]) {
+        chargeRate_11 = ChargeRate.SE1;
+    } else if (resLev11.value == EngResourceLev[6]) {
+        chargeRate_11 = ChargeRate.SE2;
+    } else if (resLev11.value == EngResourceLev[7]) {
+        chargeRate_11 = ChargeRate.SE3;
+    } else if (resLev11.value == EngResourceLev[8]) {
+        chargeRate_11 = ChargeRate.PE1;
+    } else if (resLev11.value == EngResourceLev[9]) {
+        chargeRate_11 = ChargeRate.PE2;
+    } else if (resLev11.value == EngResourceLev[10]) {
+        chargeRate_11 = ChargeRate.DH;
+    }else{
+        chargeRate_11 = 0;
+    }
+
+    //Twelfth row
+    if (resLev12.value == EngResourceLev[0]) {
+        chargeRate_12 = ChargeRate.int;
+    } else if (resLev12.value == EngResourceLev[1]) {
+        chargeRate_12 = ChargeRate.AE1;
+    } else if (resLev12.value == EngResourceLev[2]) {
+        chargeRate_12 = ChargeRate.AE2;
+    } else if (resLev12.value == EngResourceLev[3]) {
+        chargeRate_12 = ChargeRate.SOE1;
+    } else if (resLev12.value == EngResourceLev[4]) {
+        chargeRate_12 = ChargeRate.SOE2;
+    } else if (resLev12.value == EngResourceLev[5]) {
+        chargeRate_12 = ChargeRate.SE1;
+    } else if (resLev12.value == EngResourceLev[6]) {
+        chargeRate_12 = ChargeRate.SE2;
+    } else if (resLev12.value == EngResourceLev[7]) {
+        chargeRate_12 = ChargeRate.SE3;
+    } else if (resLev12.value == EngResourceLev[8]) {
+        chargeRate_12 = ChargeRate.PE1;
+    } else if (resLev12.value == EngResourceLev[9]) {
+        chargeRate_12 = ChargeRate.PE2;
+    } else if (resLev12.value == EngResourceLev[10]) {
+        chargeRate_12 = ChargeRate.DH;
+    }else{
+        chargeRate_12 = 0;
+    }
+
+    //Thirteenth row
+    if (resLev13.value == EngResourceLev[0]) {
+        chargeRate_13 = ChargeRate.int;
+    } else if (resLev13.value == EngResourceLev[1]) {
+        chargeRate_13 = ChargeRate.AE1;
+    } else if (resLev13.value == EngResourceLev[2]) {
+        chargeRate_13 = ChargeRate.AE2;
+    } else if (resLev13.value == EngResourceLev[3]) {
+        chargeRate_13 = ChargeRate.SOE1;
+    } else if (resLev13.value == EngResourceLev[4]) {
+        chargeRate_13 = ChargeRate.SOE2;
+    } else if (resLev13.value == EngResourceLev[5]) {
+        chargeRate_13 = ChargeRate.SE1;
+    } else if (resLev13.value == EngResourceLev[6]) {
+        chargeRate_13 = ChargeRate.SE2;
+    } else if (resLev13.value == EngResourceLev[7]) {
+        chargeRate_13 = ChargeRate.SE3;
+    } else if (resLev13.value == EngResourceLev[8]) {
+        chargeRate_13 = ChargeRate.PE1;
+    } else if (resLev13.value == EngResourceLev[9]) {
+        chargeRate_13 = ChargeRate.PE2;
+    } else if (resLev13.value == EngResourceLev[10]) {
+        chargeRate_13 = ChargeRate.DH;
+    }else{
+        chargeRate_13 = 0;
+    }
+
+    //Fourteenth row
+    if (resLev14.value == EngResourceLev[0]) {
+        chargeRate_14 = ChargeRate.int;
+    } else if (resLev14.value == EngResourceLev[1]) {
+        chargeRate_14 = ChargeRate.AE1;
+    } else if (resLev14.value == EngResourceLev[2]) {
+        chargeRate_14 = ChargeRate.AE2;
+    } else if (resLev14.value == EngResourceLev[3]) {
+        chargeRate_14 = ChargeRate.SOE1;
+    } else if (resLev14.value == EngResourceLev[4]) {
+        chargeRate_14 = ChargeRate.SOE2;
+    } else if (resLev14.value == EngResourceLev[5]) {
+        chargeRate_14 = ChargeRate.SE1;
+    } else if (resLev14.value == EngResourceLev[6]) {
+        chargeRate_14 = ChargeRate.SE2;
+    } else if (resLev14.value == EngResourceLev[7]) {
+        chargeRate_14 = ChargeRate.SE3;
+    } else if (resLev14.value == EngResourceLev[8]) {
+        chargeRate_14 = ChargeRate.PE1;
+    } else if (resLev14.value == EngResourceLev[9]) {
+        chargeRate_14 = ChargeRate.PE2;
+    } else if (resLev14.value == EngResourceLev[10]) {
+        chargeRate_14 = ChargeRate.DH;
+    }else{
+        chargeRate_14 = 0;
+    }
+
+    //Fifteenth row
+    if (resLev15.value == EngResourceLev[0]) {
+        chargeRate_15 = ChargeRate.int;
+    } else if (resLev15.value == EngResourceLev[1]) {
+        chargeRate_15 = ChargeRate.AE1;
+    } else if (resLev15.value == EngResourceLev[2]) {
+        chargeRate_15 = ChargeRate.AE2;
+    } else if (resLev15.value == EngResourceLev[3]) {
+        chargeRate_15 = ChargeRate.SOE1;
+    } else if (resLev15.value == EngResourceLev[4]) {
+        chargeRate_15 = ChargeRate.SOE2;
+    } else if (resLev15.value == EngResourceLev[5]) {
+        chargeRate_15 = ChargeRate.SE1;
+    } else if (resLev15.value == EngResourceLev[6]) {
+        chargeRate_15 = ChargeRate.SE2;
+    } else if (resLev15.value == EngResourceLev[7]) {
+        chargeRate_15 = ChargeRate.SE3;
+    } else if (resLev15.value == EngResourceLev[8]) {
+        chargeRate_15 = ChargeRate.PE1;
+    } else if (resLev15.value == EngResourceLev[9]) {
+        chargeRate_15 = ChargeRate.PE2;
+    } else if (resLev15.value == EngResourceLev[10]) {
+        chargeRate_15 = ChargeRate.DH;
+    }else{
+        chargeRate_15 = 0;
+    }
+
     
     //computations
     durMonth1 = dur1.value / weeks;
@@ -434,11 +594,21 @@ function calculate() {
     durMonth10 = dur10.value / weeks;
     total10 = durMonth10 * resNo10.value * util10.value * chargeRate10;
     durMonth11 = dur11.value / weeks;
-    total11 = durMonth11 * util11.value * chargeRate11;
+    total11 = durMonth11 * resNo11.value * util11.value * chargeRate_11;
     durMonth12 = dur12.value / weeks;
-    total12 = durMonth12 * util12.value * chargeRate12;
-    directCost = total1 + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10;
-    leadCost = total11 + total12;
+    total12 = durMonth12 * resNo12.value * util12.value * chargeRate_12;
+    durMonth13 = dur13.value / weeks;
+    total13 = durMonth13 * resNo13.value * util13.value * chargeRate_13;
+    durMonth14 = dur14.value / weeks;
+    total14 = durMonth14 * resNo14.value * util14.value * chargeRate_14;
+    durMonth15 = dur15.value / weeks;
+    total15 = durMonth15 * resNo15.value * util15.value * chargeRate_15;
+    durLead1 = durLead1.value / weeks;
+    totalLead1 = durLead1 * utilLead1.value * chargeRate11;
+    durLead2 = durLead2.value / weeks;
+    totalLead2 = durLead2 * utilLead2.value * chargeRate12;
+    directCost = total1 + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10+ total11+ total12 + total13 + total14 + total15;
+    leadCost = totalLead1 + totalLead2;
     totalCost = directCost + leadCost;
     incidentals = 0.2 * totalCost;
     finalCost = totalCost + incidentals;
@@ -462,8 +632,8 @@ function calculate() {
         findFee = 0;
     }
     
-    let total = [total1, total2, total3, total4, total5,total6, total7, total8, total9, total10];
-    let caty = [catOpt1, catOpt2, catOpt3, catOpt4, catOpt5, catOpt6, catOpt7, catOpt8, catOpt9, catOpt10];
+    let total = [total1, total2, total3, total4, total5,total6, total7, total8, total9, total10, total11, total12, total13, total14, total15];
+    let caty = [catOpt1, catOpt2, catOpt3, catOpt4, catOpt5, catOpt6, catOpt7, catOpt8, catOpt9, catOpt10, catOpt11, catOpt12, catOpt13, catOpt14, catOpt15];
         for (let i = 0; i < total.length; i++) {
             
             if (total[i] != 0) {
