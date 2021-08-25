@@ -249,6 +249,7 @@ border-radius: 8px;
 #show{
     text-align: left;
     text-transform: capitalize;
+    line-height: 35px;
 }
 
 
@@ -288,4 +289,8 @@ border-radius: 8px;
     width: 400px;
     display: none;
     text-align: left;
+}
+
+ul#others{
+  line-height: 35px;
 }

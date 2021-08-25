@@ -164,7 +164,7 @@ check.addEventListener('click', calculate);
 function calculate() {
     // result = ResourceCat[1];
     // show.innerHTML = ChargeRate.AE2
-    let chargeRate1, chargeRate2, chargeRate3, chargeRate4, chargeRate5, chargeRate6, chargeRate7, chargeRate8, chargeRate9, chargeRate10, chargeRate_11, chargeRate_12, chargeRate_13, chargeRate_14, chargeRate_15, durMonth1, durMonth2, durMonth3, durMonth4, durMonth5, durMonth6, durMonth7, durMonth8, durMonth9, durMonth10, durMonth11, durMonth12, durMonth13, durMonth14, durMonth15, durLead1, durLead2, total1, total2, total3, total4, total5, total6, total7, total8, total9, total10, total11, total12, total13, total14, total15, totalLead1, totalLead2, directCost, leadCost, totalCost, incidentals, markup, commission, findFee, price;
+    let chargeRate1, chargeRate2, chargeRate3, chargeRate4, chargeRate5, chargeRate6, chargeRate7, chargeRate8, chargeRate9, chargeRate10, chargeRate_11, chargeRate_12, chargeRate_13, chargeRate_14, chargeRate_15, durMonth1, durMonth2, durMonth3, durMonth4, durMonth5, durMonth6, durMonth7, durMonth8, durMonth9, durMonth10, durMonth11, durMonth12, durMonth13, durMonth14, durMonth15, durMonthLead1, durMonthLead2, total1, total2, total3, total4, total5, total6, total7, total8, total9, total10, total11, total12, total13, total14, total15, totalLead1, totalLead2, directCost, leadCost, totalCost, incidentals, markup, commission, findFee, price;
     let chargeRate11 = ChargeRate.LT;
     let chargeRate12 = ChargeRate.LT;   
     //first row
@@ -603,10 +603,10 @@ function calculate() {
     total14 = durMonth14 * resNo14.value * util14.value * chargeRate_14;
     durMonth15 = dur15.value / weeks;
     total15 = durMonth15 * resNo15.value * util15.value * chargeRate_15;
-    durLead1 = durLead1.value / weeks;
-    totalLead1 = durLead1 * utilLead1.value * chargeRate11;
-    durLead2 = durLead2.value / weeks;
-    totalLead2 = durLead2 * utilLead2.value * chargeRate12;
+    durMonthLead1 = durLead1.value / weeks;
+    totalLead1 = durMonthLead1 * utilLead1.value * chargeRate11;
+    durMonthLead2 = durLead2.value / weeks;
+    totalLead2 = durMonthLead2 * utilLead2.value * chargeRate12;
     directCost = total1 + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10+ total11+ total12 + total13 + total14 + total15;
     leadCost = totalLead1 + totalLead2;
     totalCost = directCost + leadCost;
@@ -618,6 +618,8 @@ function calculate() {
         markup = 0.5;
     }else if(Pscale.value == 'largeScale'){
         markup = 0.7;
+    }else{
+        markup = 0.5;
     }
     markupval = markup * finalCost;
     if (comm.checked == true) {
