@@ -155,7 +155,7 @@ DesResourceLev = ['intern', 'associate product designer 1', 'associate product d
 
 ManResourceLev = ['intern', 'associate product manager 1', 'associate product manager 2', 'product manager 1', 'product manager 2', 'senior product manager 1', 'senior product manager 2', 'senior product manager 3', 'principal product manager 1', 'principal product manager 2', 'chief technology officer'];
 
-ChargeRate = { int: 95063.33, AE1: 253463.33, AE2: 366346.66, SOE1: 531330, SOE2: 644213.33, SE1: 817880, SE2: 930763.33, SE3: 1060963.33, PE1: 1260730, PE2: 1390980, DH: 1781730, LT: 1295463.33};
+ChargeRate = { int: 153106.06, AE1: 298456.06, AE2: 423726.06, SOE1: 593256.06, SOE2: 716806.06, SE1: 1139406.06, SE2: 1267506.06, SE3: 1459606.06, PE1: 2078106.06, PE2: 2452824.06, DH: 2452824.06, LT: 2718534.06, CPIO: 2051549.86, CTO: 2452824.06};
 
 
 check.addEventListener('click', calculate);
@@ -165,8 +165,8 @@ function calculate() {
     // result = ResourceCat[1];
     // show.innerHTML = ChargeRate.AE2
     let chargeRate1, chargeRate2, chargeRate3, chargeRate4, chargeRate5, chargeRate6, chargeRate7, chargeRate8, chargeRate9, chargeRate10, chargeRate_11, chargeRate_12, chargeRate_13, chargeRate_14, chargeRate_15, durMonth1, durMonth2, durMonth3, durMonth4, durMonth5, durMonth6, durMonth7, durMonth8, durMonth9, durMonth10, durMonth11, durMonth12, durMonth13, durMonth14, durMonth15, durMonthLead1, durMonthLead2, total1, total2, total3, total4, total5, total6, total7, total8, total9, total10, total11, total12, total13, total14, total15, totalLead1, totalLead2, directCost, leadCost, totalCost, incidentals, markup, commission, findFee, price;
-    let chargeRate11 = ChargeRate.LT;
-    let chargeRate12 = ChargeRate.LT;   
+    let chargeRate11 = ChargeRate.CPIO;
+    let chargeRate12 = ChargeRate.CTO;   
     //first row
     if (resLev1.value == EngResourceLev[0]) {
         chargeRate1 = ChargeRate.int;
